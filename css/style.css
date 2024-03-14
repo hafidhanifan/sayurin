@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #e1f0da;
+}
+
+/* Header Start */
+header .navigasi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+
+  z-index: 9999;
+}
+
+header .logo {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+header .navigasi ul {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+header .navigasi ul li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  padding: 15px;
+  border-radius: 999px;
+}
+
+header .navigasi li:hover a {
+  background-color: #37d651;
+  color: black;
+}
+
+header .navigasi .burger {
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* Mobile Navigation */
+.mobile-nav {
+  height: 0;
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  background-color: #37d651;
+  overflow: hidden;
+}
+
+.mobile-nav.click {
+  height: 150px;
+  padding: 10px;
+}
+
+.mobile-nav ul li {
+  list-style-type: none;
+  padding: 8px;
+}
+
+.mobile-nav ul li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+/* Header End */
+
+/* Container  */
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* Jumbotron */
+.jumbotron {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jumbotron .jumbotron-title {
+  font-size: 2.2rem;
+}
+
+.jumbotron .jumbotron-description {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.jumbotron button {
+  margin-top: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+  background-color: #37d651;
+  border: none;
+  font-weight: bold;
+}
+
+.jumbotron button:hover {
+  background-color: #425c77;
+  color: white;
+}
+
+.jumbotron .jumbotron-img img {
+  width: 700px;
+}
+
+/* Jumbotron End */
+
+/* Product Start */
+.product {
+  box-shadow: 3px 5px 56px 20px rgba(121, 166, 92, 0.75);
+  border-radius: 50px;
+}
+
+.product .product-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.food {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.food .card {
+  padding: 10px;
+  text-align: center;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.food .card img {
+  width: 350px;
+  border-radius: 20px;
+}
+
+/* Product End */
+
+/* Aside Start */
+aside {
+  max-width: 1200px;
+  margin-inline: auto;
+  margin-top: 90px;
+}
+
+aside article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+article img {
+  width: 600px;
+  border-radius: 60px;
+}
+
+aside article button {
+  margin-top: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+  background-color: #37d651;
+  border: none;
+  font-weight: bold;
+}
+
+aside article button:hover {
+  background-color: #425c77;
+  color: white;
+}
+
+/* Aside End */
+
+footer {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  header .navigasi ul li a {
+    display: none;
+  }
+
+  header .navigasi .burger {
+    display: block;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  header .logo {
+    font-size: 1.4rem;
+    padding: 25px;
+    font-weight: bold;
+  }
+
+  .jumbotron {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .jumbotron .jumbotron-title {
+    font-size: 1.4rem;
+  }
+
+  .jumbotron .jumbotron-description {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  .jumbotron .jumbotron-img img {
+    width: 100%;
+  }
+
+  .food {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .food .card img {
+    width: 100%;
+  }
+
+  aside article {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  aside article img {
+    width: 100%;
+  }
+}
